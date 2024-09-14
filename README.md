@@ -1,4 +1,4 @@
-# Health-App
+<!-- # Health-App
 
 ## Introduction
 
@@ -102,8 +102,8 @@ Welcome to the Intelligent Patient Data Management System, a revolutionary proje
 > - Chetan Sharma
 > - Sudhanshu Shekhar
 > - Mahendra Suthar
-> - Sneha Vaghela
+> - Jay Kapadia
 
 ## :handshake: Contact
 
-Chetan Sharma - - cschetan559@gmail.com
+Chetan Sharma - - me@chetansharma.co -->
