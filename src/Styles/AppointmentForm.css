@@ -1,0 +1,136 @@
+.form-container {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: linear-gradient(to right, #ecf2ff, #fbfcff);
+}
+.form-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+.form-title > span {
+  position: relative;
+}
+.form-title span::before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 4px;
+  background-color: #9d2553;
+  border-radius: 8px;
+  left: 0;
+  bottom: -12px;
+}
+/* Form */
+
+.form-content {
+  position: relative;
+}
+.form-content label {
+  margin: 0 0 16px 0;
+  display: block;
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.7px;
+}
+
+.redAsterisk {
+  color: red;
+}
+
+.form-content label :is(input, select) {
+  width: 100%;
+  margin: 8px 0;
+  padding: 0 12px;
+  display: block;
+  height: 40px;
+  color: black;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: #c9def4;
+  outline: transparent;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+}
+/* Success Message */
+.success-message {
+  margin: 20px 0 0 0;
+  color: green;
+  font-family: "Rubik", sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.7px;
+  line-height: 1.7rem;
+}
+/* Error Message */
+.error-message {
+  color: red;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.7px;
+  line-height: 1.7rem;
+}
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .form-container {
+    padding: 24px;
+  }
+  .form-title {
+    font-size: 24px;
+  }
+  .form-content label {
+    font-size: 18px;
+  }
+  .form-content label :is(input, select) {
+    font-size: 16px;
+  }
+  .success-message {
+    margin: 12px 0 0 0;
+    font-size: 18px;
+  }
+}
+/* Updated CSS */
+
+.form-content label textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px 12px; /* Updated padding for better spacing */
+  min-height: 100px; /* Minimum height for the textarea */
+  max-height: 200px; /* Maximum height for the textarea */
+  resize: vertical; /* Allow vertical resizing */
+  color: black;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: #c9def4;
+  outline: transparent;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+  line-height: 1.5; /* Adjust line height for better readability */
+}
+
+.response {
+  position: relative;
+  width: 70%;
+  left: 15%;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  background-color: #c9def4;
+  border-style: double;
+  border-radius: 6px;
+  font-size: 18pt;
+}
+
+.response p {
+  border-radius: 12px;
+  padding: 12px;
+  white-space: pre-wrap;
+}
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .form-content label textarea {
+    font-size: 16px;
+  }
+}

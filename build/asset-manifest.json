@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "./static/css/main.3cd98f23.css",
+    "main.js": "./static/js/main.283da901.js",
+    "static/media/doctor-book-appointment.png": "./static/media/doctor-book-appointment.3c84c68ac56ff94e9807.png",
+    "static/media/profile-4.png": "./static/media/profile-4.27a486393bfc121209c7.png",
+    "static/media/profile-2.png": "./static/media/profile-2.5d7e1040c3c4c60f94c6.png",
+    "static/media/doctor-group.png": "./static/media/doctor-group.73e0f990b188299b31cb.png",
+    "static/media/profile-3.png": "./static/media/profile-3.d43d383eaf892f77d305.png",
+    "static/media/doctor-picture.png": "./static/media/doctor-picture.9dd001809e6f5a8d4fd7.png",
+    "static/media/profile-1.png": "./static/media/profile-1.9dd001809e6f5a8d4fd7.png",
+    "index.html": "./index.html",
+    "main.3cd98f23.css.map": "./static/css/main.3cd98f23.css.map",
+    "main.283da901.js.map": "./static/js/main.283da901.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3cd98f23.css",
+    "static/js/main.283da901.js"
+  ]
+}
