@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../Styles/AppointmentForm.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -29,18 +29,22 @@ function AppointmentForm() {
       vitalSigns || "none"
     }, or may be the lab results ${labResults || "none"} are mentioned.`;
 
-    const task = `As a professional doctor, give suggestions to the patient based on the above symptoms which include the possible acute disease in which these symptoms are shown, mention the precautions and suggest the lab tests to check the possible disease for confirmation.and suggest a specialist to be consulted`;
+    const task = `As a professional doctor, give suggestions to the patient based on the above symptoms which include the possible acute disease in which these symptoms are shown, mention the precautions and suggest the lab tests to check the possible disease for confirmation and suggest a specialist to be consulted.`;
 
-    const format = `Provide the suggestions in step by step and in ordered numeric list with highlighting the main topic and in a readable format where each point begins in new line.`;
+    const format = `Provide the suggestions in step by step and in ordered numeric list with highlighting the main topic and in a readable format where each point begins in a new line.`;
 
-    const tone = `Use a simple language that a patient can easily understand.`;
+    const tone = `Use simple language that a patient can easily understand.`;
 
     const prompt = `${character}\n\n${task}\n\n${format}\n\n${tone}`;
 
     try {
-      const res = await axios.post("http://localhost:5000/chat", { prompt });
+      const res = await axios.post(
+        "https://5ef3-34-86-228-130.ngrok-free.app/chat",
+        { prompt }
+      );
       console.log(res);
-      setResponse(res.data);
+      // Ensure you're accessing the `response` key properly
+      setResponse(res.data.response); // Assuming `response` key is part of the response object
       toast.success("Appointment Scheduled!", {
         position: toast.POSITION.TOP_CENTER,
         onOpen: () => setIsSubmitted(true),
@@ -48,18 +52,22 @@ function AppointmentForm() {
       });
     } catch (error) {
       console.error("Error:", error);
+      toast.error("An error occurred. Please try again.", {
+        position: toast.POSITION.TOP_CENTER,
+      });
     }
 
-    setPatientName("");
-    setPatientNumber("");
-    setPatientAge("");
-    setPatientGender("default");
-    setMedicalHistory("");
-    setCurrentSymptoms("");
-    setMedications("");
-    setAllergies("");
-    setVitalSigns("");
-    setLabResults("");
+    // Clear form fields after submission
+    // setPatientName("");
+    // setPatientNumber("");
+    // setPatientAge("");
+    // setPatientGender("default");
+    // setMedicalHistory("");
+    // setCurrentSymptoms("");
+    // setMedications("");
+    // setAllergies("");
+    // setVitalSigns("");
+    // setLabResults("");
   };
 
   return (
@@ -174,20 +182,20 @@ function AppointmentForm() {
           </label>
 
           <button type="submit" className="text-appointment-btn">
-            Submit and Analyse
+            Submit and Assist
           </button>
 
           <p
             className="success-message"
             style={{ display: isSubmitted ? "block" : "none" }}
           >
-            Data submitted sucessfully.
+            Data submitted successfully.
           </p>
 
           {/* Display response from server */}
           {response && (
             <div className="response alert alert-primary" role="alert">
-              <p>{response}</p>
+              <p>{response}</p> {/* Renders response correctly */}
             </div>
           )}
         </form>

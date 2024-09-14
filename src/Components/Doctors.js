@@ -7,15 +7,13 @@
 // import profile4 from "../Assets/profile-4.png";
 // import "../Styles/Doctors.css";
 
-
 // function Doctors() {
 //   const navigate = useNavigate();
 
 //   const handleLoginClick = (doctorName) => {
-    
-//     navigate("/login"); 
-//   };
 
+//     navigate("/login");
+//   };
 
 //   return (
 //     <div className="doctor-section" id="doctors">
@@ -111,14 +109,14 @@ function Doctors() {
         />
         <DoctorCard
           img={profile3}
-          name="Dr. Sneha"
+          name="Dr. Jaya"
           title="Physician"
           stars="4.9"
           reviews="450"
         />
         <DoctorCard
           img={profile4}
-          name="Dr. Chaitanya"
+          name="Dr. Chetan"
           title="Cardiologist"
           stars="4.8"
           reviews="500"
