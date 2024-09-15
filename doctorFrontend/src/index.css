@@ -1,0 +1,28 @@
+:root{
+    --dark : #2d2c2c;
+  }
+
+  #root{
+    width:100%;
+  }
+  
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  button{
+    cursor:pointer;
+  }
+
+  a{
+    text-decoration:none;
+  }
+
+  body{
+    width: 100%;
+    height : 100vh ;
+    font-family : "roboto" ;
+    /* background-color: grey; */
+  }
