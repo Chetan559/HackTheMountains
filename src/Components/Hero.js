@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleUp,
   faMagnifyingGlassChart,
+  faRobot,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import "../Styles/Hero.css";
@@ -18,6 +19,10 @@ function Hero() {
 
   const handleBookAppointmentClick = () => {
     navigate("/appointment");
+  };
+
+  const handleChatbotClick = () => {
+    navigate("/chatbot"); // assuming the chatbot component is at /chatbot route
   };
 
   useEffect(() => {
@@ -53,6 +58,13 @@ function Hero() {
             onClick={handleBookAppointmentClick}
           >
             <FontAwesomeIcon icon={faMagnifyingGlassChart} /> Analyse
+          </button>
+          <button
+            className="text-appointment-btn"
+            type="button"
+            onClick={handleChatbotClick}
+          >
+            <FontAwesomeIcon icon={faRobot} /> Med-Bot
           </button>
         </div>
 

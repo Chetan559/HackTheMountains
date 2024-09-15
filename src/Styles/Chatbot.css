@@ -1,0 +1,121 @@
+/* Make sure this only applies to the chatbot and not other components */
+.full-page-chatbot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: linear-gradient(to right, #ecf2ff, #fbfcff);
+  z-index: 1000; /* Ensure it stays on top */
+  box-sizing: border-box;
+}
+
+/* Message List */
+.full-page-chatbot .message-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+/* User and Bot Message */
+.full-page-chatbot .user-message,
+.full-page-chatbot .bot-message {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6rem;
+}
+
+/* User Message Styling */
+.full-page-chatbot .user-message {
+  background-color: #ecf2ff;
+  color: #4d4b4b;
+  text-align: left;
+}
+
+/* Bot Message Styling */
+.full-page-chatbot .bot-message {
+  background-color: #fbfcff;
+  color: #4d4b4b;
+  text-align: left;
+}
+
+/* Message Label */
+.full-page-chatbot .user-message::before,
+.full-page-chatbot .bot-message::before {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.full-page-chatbot .user-message::before {
+  content: "You:";
+  color: #1a8efd;
+}
+
+.full-page-chatbot .bot-message::before {
+  content: "Bot:";
+  color: #1a8efd;
+}
+
+/* Input Fields */
+.full-page-chatbot input[type="text"],
+.full-page-chatbot input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
+
+/* Buttons */
+.full-page-chatbot button[type="submit"],
+.full-page-chatbot button[type="button"] {
+  background-color: #1a8efd;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 28px;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-right: 10px;
+}
+
+.full-page-chatbot button[type="submit"]:hover,
+.full-page-chatbot button[type="button"]:hover {
+  background-color: transparent;
+  color: #1a8efd;
+  border: 1px solid #1a8efd;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .full-page-chatbot {
+    padding: 15px;
+  }
+
+  .full-page-chatbot .user-message,
+  .full-page-chatbot .bot-message {
+    font-size: 14px;
+  }
+
+  .full-page-chatbot button[type="submit"],
+  .full-page-chatbot button[type="button"] {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}

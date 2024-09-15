@@ -7,6 +7,7 @@ import NotFound from "./Pages/NotFound";
 import Appointment from "./Pages/Appointment";
 import DoctorRegistrationForm from "./Pages/DoctorRegistration";
 import DoctorLoginForm from "./Components/DoctorLogin";
+import Chatbot from "./Components/Chatbot";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/appointment" element={<Appointment />} />
+          <Route path="/chatbot" element={<Chatbot />} />
           <Route path="/registration" element={<DoctorRegistrationForm />} />
           <Route path="/login" element={<DoctorLoginForm />} />
           <Route path="*" element={<NotFound />} />
